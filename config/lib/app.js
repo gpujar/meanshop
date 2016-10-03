@@ -20,6 +20,7 @@ function seedDB() {
 mongoose.loadModels(seedDB);
 
 module.exports.init = function init(callback) {
+  console.log('Initializing mongo db ');
   mongoose.connect(function (db) {
     // Initialize express
     var app = express.init(db);
@@ -29,8 +30,8 @@ module.exports.init = function init(callback) {
 };
 
 module.exports.start = function start(callback) {
+  console.log('App.js START..........');
   var _this = this;
-
   _this.init(function (app, db, config) {
 
     // Start the app by listening on <port> at <host>

@@ -72,6 +72,8 @@ gulp.task('node-inspector', function() {
 
 // Nodemon debug task
 gulp.task('nodemon-debug', function () {
+  console.log('Task nodemon');
+ // console.trace();
   return plugins.nodemon({
     script: 'server.js',
     nodeArgs: ['--debug'],
@@ -254,6 +256,8 @@ gulp.task('wiredep:prod', function () {
 
 // Copy local development environment config example
 gulp.task('copyLocalEnvConfig', function () {
+  console.log('copy local env config...................');
+  //console.trace();
   var src = [];
   var renameTo = 'local-development.js';
 
@@ -269,6 +273,7 @@ gulp.task('copyLocalEnvConfig', function () {
 
 // Make sure upload directory exists
 gulp.task('makeUploadsDir', function () {
+ // console.trace();
   return fs.mkdir('modules/users/client/img/profile/uploads', function (err) {
     if (err && err.code !== 'EEXIST') {
       console.error(err);
@@ -295,6 +300,7 @@ gulp.task('mocha', function (done) {
   var mongoose = require('./config/lib/mongoose.js');
   var testSuites = changedTestFiles.length ? changedTestFiles : testAssets.tests.server;
   var error;
+  //console.trace();
 
   // Connect mongoose
   mongoose.connect(function () {
@@ -454,6 +460,8 @@ gulp.task('test:coverage', function (done) {
 
 // Run the project in development mode
 gulp.task('default', function (done) {
+ // console.trace();
+  console.log('Done  '+done);
   runSequence('env:dev', ['copyLocalEnvConfig', 'makeUploadsDir'], 'lint', ['nodemon', 'watch'], done);
 });
 
