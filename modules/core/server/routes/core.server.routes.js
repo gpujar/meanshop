@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function (app) {
-  console.log("Giri :: Listing for port ");
   console.trace();
   // Root routing
   var core = require('../controllers/core.server.controller');

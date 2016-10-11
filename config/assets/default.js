@@ -9,7 +9,19 @@ module.exports = {
         // bower:css
         'public/lib/bootstrap/dist/css/bootstrap.css',
         'public/lib/bootstrap/dist/css/bootstrap-theme.css',
-        'public/lib/ng-img-crop/compile/unminified/ng-img-crop.css'
+        'public/lib/ng-img-crop/compile/unminified/ng-img-crop.css',
+
+        'public/lib/bootstrap/bootstrap.min.css',
+        'public/lib/bootstrap/bootstrap-theme.min.css',
+        'public/lib/animate.css',
+        'public/lib/slide/component.css',
+        'public/lib/owl_carousel/owl.carousel.css',
+        'public/lib/owl_carousel/owl.theme.css',
+        'public/lib/minislide/flexslider.css',
+        'public/lib/gallery.css',
+        'public/lib/fancybox/jquery.fancybox.css',
+        'public/lib/main.css',
+        'public/lib/responsive.css',
         // endbower
       ],
       js: [
@@ -24,6 +36,17 @@ module.exports = {
         'public/lib/angular-resource/angular-resource.js',
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
+        'public/lib/jquery.min.js',
+        'public/lib/bootstrap.min.js',
+        'public/lib/modernizr.js',
+        'public/lib/jquery.appear.js',
+        'public/lib/minislide/jquery.flexslider.js',
+        'public/lib/owl_carousel/owl.carousel.js',
+        'public/lib/gallery/jquery.fancybox.js',
+        'public/lib/gallery/jquery.mousewheel-3.0.6.pack.js',
+        'public/lib/parallaxsoon2.js',
+        'public/lib/isotope.js',
+        'public/lib/script.js',
         // endbower
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']
@@ -47,7 +70,10 @@ module.exports = {
       'modules/**/*/img/**/*.jpg',
       'modules/**/*/img/**/*.png',
       'modules/**/*/img/**/*.gif',
-      'modules/**/*/img/**/*.svg'
+      'modules/**/*/img/**/*.svg',
+      'modules/**/*/images/**/*.gif',
+      'modules/**/*/images/**/*.jpg',
+      'modules/**/*/images/**/*.png'
     ],
     views: ['modules/*/client/views/**/*.html'],
     templates: ['build/templates.js']
